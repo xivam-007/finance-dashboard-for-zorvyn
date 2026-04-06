@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>FinTrack — Finance Dashboard</title>
+        <title>Finance Dashboard</title>
         <meta name="description" content="Personal finance tracking dashboard" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>₹</text></svg>" />

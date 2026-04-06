@@ -17,8 +17,7 @@ export default function Sidebar() {
         <div className="logo-mark">
           <div className="logo-icon">₹</div>
           <div>
-            <div className="logo-text">FinTrack</div>
-            <div className="logo-sub">Finance Dashboard</div>
+            <div className="logo-text">Finance Dashboard</div>
           </div>
         </div>
       </div>
