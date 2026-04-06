@@ -10,7 +10,6 @@ export default function DashboardPage() {
 
   return (
     <div>
-      {/* Header */}
       <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: 24, flexWrap: 'wrap', gap: 12 }}>
         <div>
           <div className="page-title">Dashboard</div>
@@ -25,16 +24,12 @@ export default function DashboardPage() {
         )}
       </div>
 
-      {/* Summary Cards */}
       <SummaryCards />
 
-      {/* Charts */}
       <div className="charts-grid">
-        <BalanceTrendChart />
         <SpendingBreakdown />
+        <BalanceTrendChart />
       </div>
-
-      {/* Recent Transactions */}
       <RecentTransactions />
     </div>
   );

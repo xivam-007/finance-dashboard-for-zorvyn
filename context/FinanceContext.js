@@ -20,6 +20,7 @@ const initialState = {
   },
   ui: {
     activeTab: 'dashboard',
+    chartView: 'area',
     transactionModal: { open: false, transaction: null },
     deleteConfirm: { open: false, id: null },
   },
@@ -35,6 +36,9 @@ function financeReducer(state, action) {
 
     case 'SET_ACTIVE_TAB':
       return { ...state, ui: { ...state.ui, activeTab: action.payload } };
+
+    case 'SET_CHART_VIEW':
+      return { ...state, ui: { ...state.ui, chartView: action.payload } };
 
     case 'SET_FILTER':
       return { ...state, filters: { ...state.filters, [action.key]: action.value } };
@@ -126,6 +130,8 @@ export function FinanceProvider({ children }) {
   const closeTransactionModal = useCallback(() => dispatch({ type: 'CLOSE_TRANSACTION_MODAL' }), []);
   const openDeleteConfirm = useCallback((id) => dispatch({ type: 'OPEN_DELETE_CONFIRM', payload: id }), []);
   const closeDeleteConfirm = useCallback(() => dispatch({ type: 'CLOSE_DELETE_CONFIRM' }), []);
+  const setChartView = useCallback((view) => dispatch({ type: 'SET_CHART_VIEW', payload: view }), []);
+
 
   const isAdmin = state.role === 'ADMIN';
 
@@ -146,6 +152,7 @@ export function FinanceProvider({ children }) {
       closeTransactionModal,
       openDeleteConfirm,
       closeDeleteConfirm,
+      setChartView,
     }}>
       {children}
     </FinanceContext.Provider>

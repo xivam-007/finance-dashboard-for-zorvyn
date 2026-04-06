@@ -740,7 +740,7 @@ tbody td {
 /* ─── Charts Section ────────────────────────────────────────────── */
 .charts-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   gap: 16px;
   margin-top: 16px;
 }
